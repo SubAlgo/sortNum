@@ -3,7 +3,6 @@ const ascArr = (x) => {
     let setMax = []
     let max
     let min
-    let ind
     const member = x.length
 
     console.log("Array.length : " + member)
@@ -12,23 +11,18 @@ const ascArr = (x) => {
     while (x.length != 0) {
         if(x.length == 1) {
             min = Math.min(...x)
+
+            setMin = [...setMin, min]
         } else {
             max = Math.max(...x)
             min = Math.min(...x)
-        }
-        
-     
-        if(x.length == 1) {
-            setMin = [...setMin, min]
-        } else {
+
             setMin = [...setMin, min]
             setMax = [max , ...setMax]
         }
-
         
         x = x.filter(e => e !== max)
         x = x.filter(e => e !== min)
-        console.log(x)
     }
 
     //----------------------------------
@@ -41,6 +35,5 @@ const ascArr = (x) => {
 }
 
 
-
-ascArr([90, 81, 30, 45, 35, 56, 15, 2, 7, 23, 11])
-//ascArr([90,81,56,45,35,33,30,23,15,11,7,2])
+//ascArr([90, 81, 30, 45, 35, 56, 15, 2, 7, 23, 11])
+ascArr([90,81,56,45,35,33,30,23,15,11,7,2])
