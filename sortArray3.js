@@ -3,6 +3,7 @@ const ascArr = (x) => {
     let setMax = []
     let max
     let min
+    let r = 0
     const member = x.length
 
     console.log("Array.length : " + member)
@@ -23,6 +24,8 @@ const ascArr = (x) => {
         
         x = x.filter(e => e !== max)
         x = x.filter(e => e !== min)
+
+        r++
     }
 
     //----------------------------------
@@ -32,6 +35,7 @@ const ascArr = (x) => {
     console.log("Setmax : " + setMax)
 
     console.log("Result : " + result)
+    console.log("Rount : " + r)
 }
 
 
