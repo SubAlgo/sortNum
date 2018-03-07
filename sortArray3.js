@@ -4,119 +4,38 @@ const ascArr = (x) => {
     let max
     let min
     let ind
+    const member = x.length
 
-    //if len = 1
-    console.log(x)
+    console.log("Array.length : " + member)
+    console.log("member of array : " + x)
 
-    max = Math.max(...x)
-    min = Math.min(...x)
-    console.log(min)
-    console.log(max)
+    while (x.length != 0) {
+        if(x.length == 1) {
+            min = Math.min(...x)
+        } else {
+            max = Math.max(...x)
+            min = Math.min(...x)
+        }
+        
+     
+        if(x.length == 1) {
+            setMin = [...setMin, min]
+        } else {
+            setMin = [...setMin, min]
+            setMax = [max , ...setMax]
+        }
 
-    setMin = [...setMin, min]
-    setMax = [max , ...setMax]
-
-    console.log(setMin)
-    console.log(setMax)
-
-   
-    x = x.filter(e => e !== max)
-    x = x.filter(e => e !== min)
-    console.log(x)
-    
-    //----------------------------------
-    console.log("---------------------------")
-    max = Math.max(...x)
-    min = Math.min(...x)
-    console.log(min)
-    console.log(max)
-
-    setMin = [...setMin, min]
-    setMax = [max , ...setMax]
-
-    console.log(setMin)
-    console.log(setMax)
-
-   
-    x = x.filter(e => e !== max)
-    x = x.filter(e => e !== min)
-    console.log(x)
-
-    //----------------------------------
-    console.log("---------------------------")
-    max = Math.max(...x)
-    min = Math.min(...x)
-    console.log(min)
-    console.log(max)
-
-    setMin = [...setMin, min]
-    setMax = [max , ...setMax]
-
-    console.log(setMin)
-    console.log(setMax)
-
-   
-    x = x.filter(e => e !== max)
-    x = x.filter(e => e !== min)
-    console.log(x)
-
-    //----------------------------------
-    console.log("---------------------------")
-    max = Math.max(...x)
-    min = Math.min(...x)
-    console.log(min)
-    console.log(max)
-
-    setMin = [...setMin, min]
-    setMax = [max , ...setMax]
-
-    console.log(setMin)
-    console.log(setMax)
-
-   
-    x = x.filter(e => e !== max)
-    x = x.filter(e => e !== min)
-    console.log(x)
-
-    //----------------------------------
-    console.log("---------------------------")
-    max = Math.max(...x)
-    min = Math.min(...x)
-    console.log(min)
-    console.log(max)
-
-    setMin = [...setMin, min]
-    setMax = [max , ...setMax]
-
-    console.log(setMin)
-    console.log(setMax)
-
-   
-    x = x.filter(e => e !== max)
-    x = x.filter(e => e !== min)
-    console.log(x)
-
-    //----------------------------------
-    console.log("---------------------------")
-    max = Math.max(...x)
-    min = Math.min(...x)
-    console.log(min)
-    console.log(max)
-
-    setMin = [...setMin, min]
-    setMax = [max , ...setMax]
-
-    console.log(setMin)
-    console.log(setMax)
-
-   
-    x = x.filter(e => e !== max)
-    x = x.filter(e => e !== min)
-    console.log(x)
+        
+        x = x.filter(e => e !== max)
+        x = x.filter(e => e !== min)
+        console.log(x)
+    }
 
     //----------------------------------
     
     const result = setMin.concat(setMax)
+    console.log("Setmin : " + setMin)
+    console.log("Setmax : " + setMax)
 
     console.log("Result : " + result)
 }
